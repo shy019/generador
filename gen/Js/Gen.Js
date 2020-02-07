@@ -28,7 +28,7 @@
 
             //Class
             var h1Class1 = "logo" ;
-            var h2Class1 = "BannerTitulo" ;
+            var h2Class1 = "bannerTitulo" ;
             var h3Class1 = "" ;
             var h4Class1 = "" ;
 
@@ -75,7 +75,7 @@
             var pId1 = "" ;
 
             //Class
-            var pClass1 = "BannerTxt" ;
+            var pClass1 = "bannerTxt" ;
 
         function p(pId,pClass){
             return " <p id=\"" + pId + "\" class=\"" + pClass + "\"> " ;
@@ -127,7 +127,7 @@
             var inputName = "";
 
         function input(inputId,inputClass,inputType,inputName){
-            return "<input type=\"" + inputType + "\" name=\"" + inputName + "\" id=\"" + inputId + "\" class=\"" + inputClass + "\"">"
+            return "<input type=\"" + inputType + "\" name=\"" + inputName + "\" id=\"" + inputId + "\" class=\"" + inputClass + "\">";
         }
         //Button
             //Id
@@ -143,10 +143,10 @@
             var buttonName = "";
 
         function button(buttonId,buttonClass,buttonType,buttonName){
-            return "<button type=\"" + buttonType + "\" name=\"" + buttonName + "\" id=\"" +buttonId + "\" class=\"" + buttonClass + "\"">"
+            return "<button type=\"" + buttonType + "\" name=\"" + buttonName + "\" id=\"" +buttonId + "\" class=\"" + buttonClass + "\">";
         }
         //Imagenes
-        var directorioImagen1 = "Images/img1.png";
+        var srcImagen1 = "Images/img1.png";
         var altImagen1 = "Imagen1" ;
         var classImagen1 = "logo" ;
 
@@ -171,6 +171,7 @@
 
            //Class
            var aClass1 = "menuLink" ;
+           var aClass2 = "select" ;
 
         function a(aHref,aClass){
             return "<a href=\"" + aHref + "\" class=\"" + aClass + "\"> " ;
@@ -182,11 +183,11 @@
         //Header
         var header = header(headerId1,headerClass1)
                          + div(divId1,divClass1)
-                            + h1(h1Id1,h1Class1) + "I.E. Nobel" + h1s//+ insertarImagen(directorioImagen1,altImagen1,classImagen1)
+                            + h1(h1Id1,h1Class1) + "MascoTaz" + h1s//+ insertarImagen(directorioImagen1,altImagen1,classImagen1)
                                 + span(spanId1,spanClass1) + spans
                                     + nav(navId1,navClass1)
                                         + ul(ulId1,ulClass1)
-                                            +li(liId1,liClass1) + a(aHref1,aClass1) + "Inicio" + as + lis
+                                            +li(liId1,liClass1) + a(aHref1,aClass1 + " " + aClass2) + "Inicio" + as + lis
                                             +li(liId1,liClass1) + a(aHref1,aClass1) + "Cursos" + as + lis
                                             +li(liId1,liClass1) + a(aHref1,aClass1) + "Docentes" + as + lis
                                             +li(liId1,liClass1) + a(aHref1,aClass1) + "Contactos" + as  + lis
@@ -195,10 +196,10 @@
                          + divs
                    + headers ;
         var banner = div(divId2,divClass2)
-                        + insertarImagen(directorioImagen1,altImagen1,divClass2)
+                        + insertarImagen(divClass2,srcImagen1,altImagen1)
                             + div(divId2,divClass1)
                                 + h2(h2Id1,h2Class1) + "La Mejor Veterinaria" + h2s
-                                    + p(pId1,pClass1) + "" + ps
+                                    + p(pId1,pClass1) + "Consiga los mejores productos al mejor precio" + ps
                             + divs
                      divs ;
         //DOM  
