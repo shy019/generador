@@ -4,12 +4,22 @@
         var pagina = document.getElementById("general") ;
         var nombrePagina = "" ;
 
+        //Main
+            //Id
+            var mainId1 = "" ;
 
+            //Class
+            var mainClass1 = "main" ;
 
+        function main(mainId,mainClass){
+            return " <main id=\"" + mainId + "\" class=\"" + mainClass + "\"> " ;
+        }
+        var mains = " </main>" ;
         //Div
             //Id
             var divId1 = "" ;
             var divId2 = "" ;
+            var divId3 = "" ;
 
             //Class
             var divClass1 = "contenedor" ;
@@ -22,27 +32,42 @@
         //H
             //Id
             var h1Id1 = "" ;
+            var h1Id2 = "" ;
+
+
             var h2Id1 = "" ;
+            var h2Id2 = "" ;
+            
             var h3Id1 = "" ;
+            var h3Id2 = "" ;
+            
             var h4Id1 = "" ;
+            var h4Id2 = "" ;
 
             //Class
             var h1Class1 = "logo" ;
+            var h1Class2 = "" ;
+            
             var h2Class1 = "bannerTitulo" ;
-            var h3Class1 = "" ;
+            var h2Class2 = "" ;
+            
+            var h3Class1 = "infoTitulo" ;
+            var h3Class2 = "" ;
+            
             var h4Class1 = "" ;
+            var h4Class2 = "" ;
 
         function h1(h1Id,h1Class){
             return " <h1 id=\"" + h1Id + "\" class=\"" + h1Class + "\"> " ;
         }
         function h2(h2Id,h2Class){
-            return " <h1 id=\"" + h2Id + "\" class=\"" + h2Class + "\"> " ;
+            return " <h2 id=\"" + h2Id + "\" class=\"" + h2Class + "\"> " ;
         }
         function h3(h3Id,h3Class){
-            return " <h1 id=\"" + h3Id + "\" class=\"" + h3Class + "\"> " ;
+            return " <h3 id=\"" + h3Id + "\" class=\"" + h3Class + "\"> " ;
         }
         function h4(h4Id,h4Class){
-            return " <h1 id=\"" + h4Id + "\" class=\"" + h4Class + "\"> " ;
+            return " <h4 id=\"" + h4Id + "\" class=\"" + h4Class + "\"> " ;
         }
         var h1s = " </h1> " ;
         var h2s = " </h2> " ;
@@ -59,6 +84,17 @@
             return " <span id=\"" + SpanId + "\" class=\"" + SpanClass + "\"> " ;
         }
         var spans = " </span> " ;
+        //Section
+            //Id
+            var sectionId1 = "" ;
+
+            //Class
+            var sectionClass1 = "info" ;
+
+        function section(sectionId,sectionClass){
+            return " <section id=\"" + sectionId + "\" class=\"" + sectionClass + "\"> " ;
+        }
+        var sections = " </section> " ;        
         //Header
             //Id
             var headerId1 = "" ;
@@ -73,9 +109,11 @@
         //P
             //Id
             var pId1 = "" ;
+            var pId2 = "" ;
 
             //Class
             var pClass1 = "bannerTxt" ;
+            var pClass2 = "infoTxt" ;
 
         function p(pId,pClass){
             return " <p id=\"" + pId + "\" class=\"" + pClass + "\"> " ;
@@ -113,6 +151,17 @@
             return " <nav id=\"" + navId + "\" class=\"" + navClass + "\"> " ;
         }
         var navs = " </nav> " ;
+        //Article
+            //Id
+            var articleId1 = "" ;
+
+            //Class
+            var articleClass1 = "infoColumna" ;
+
+        function article(articleId,articleClass){
+            return " <article id=\"" + articleId + "\" class=\"" + articleClass + "\"> " ;
+        }
+        var articles = " </article> " ;        
         //Input
             //Id
             var inputId = "" ;
@@ -146,12 +195,23 @@
             return "<button type=\"" + buttonType + "\" name=\"" + buttonName + "\" id=\"" +buttonId + "\" class=\"" + buttonClass + "\">";
         }
         //Imagenes
-        var srcImagen1 = "Images/img1.png";
-        var altImagen1 = "Imagen1" ;
-        var classImagen1 = "logo" ;
+            //Src
+            var imagenSrc1 = "Images/img1.png";
+            var imagenSrc2 = "Images/img2.png";
+            var imagenSrc2 = "Images/img3.png";
+        
+            //Alt
+            var imagenAlt1 = "Imagen1" ;
+            var imagenAlt2 = "Imagen2" ;
+            var imagenAlt2 = "Imagen2" ;
+        
+            //Class
+            var imagenClass1 = "logo" ;
+            var imagenClass2 = "infoImg" ;
+            var imagenClass2 = "infoImg" ;
 
-        function insertarImagen(ImagenClass,imagenImagen,altImagen){
-            return " <img src=\"" + imagenImagen + "\" alt=\"" + altImagen + "\"  " + " class=\"" + ImagenClass + "\">  " ;
+        function insertarImagen(ImagenClass,imagenSrc,imagenAlt){
+            return " <img src=\"" + imagenSrc + "\" alt=\"" + imagenAlt + "\"  " + " class=\"" + ImagenClass + "\">  " ;
         }
         //Video
         var widthVideo1 = "" ;
@@ -196,14 +256,35 @@
                          + divs
                    + headers ;
         var banner = div(divId2,divClass2)
-                        + insertarImagen(divClass2,srcImagen1,altImagen1)
+                        + insertarImagen(imagenClass2,imagenSrc1,imagenAlt1)
                             + div(divId2,divClass1)
                                 + h2(h2Id1,h2Class1) + "La Mejor Veterinaria" + h2s
                                     + p(pId1,pClass1) + "Consiga los mejores productos al mejor precio" + ps
                             + divs
-                     divs ;
+                   + divs ;
+        var main =  main(mainId1,mainClass1)
+                        + div(divId3,divClass1)
+                            + section(sectionId1,sectionClass1)
+                                + article(articleId1,articleClass1)
+                                    + insertarImagen(imagenClass2,imagenSrc2,imagenAlt2)
+                                    + h2(h2Id2,h2Class2) + "Titulo 1" + h2s
+                                    + p(pId2,pClass2) + "Lorem" + ps        
+                                + articles
+                                + article(articleId1,articleClass1)
+                                    + insertarImagen(imagenClass2,imagenSrc2,imagenAlt2)
+                                    + h2(h2Id2,h2Class2) + "Titulo 2" + h2s
+                                    + p(pId2,pClass2) + "Lorem" + ps        
+                                + articles
+                                + article(articleId1,articleClass1)
+                                    + insertarImagen(imagenClass2,imagenSrc2,imagenAlt2)
+                                    + h2(h2Id2,h2Class2) + "Titulo 3" + h2s
+                                    + p(pId2,pClass2) + "Lorem" + ps        
+                                + articles
+                            + sections
+                        + divs
+                   + mains;
         //DOM  
-        pagina.innerHTML = header + banner ;
+        pagina.innerHTML = header + banner + main ;
 
         var nav = document.getElementById(navId1) ;
         console.log(nav);
